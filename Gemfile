@@ -63,3 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # #manualy added sentry gem below
 # gem "sentry-raven"
+
+gem "clearance"
