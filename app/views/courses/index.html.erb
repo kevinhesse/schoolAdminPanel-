@@ -1,19 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Courses</h1>
+<h3>Courses</h3>
+
+
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Hours</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+
 
   <tbody>
-    <% @courses.each do |course| %>
-      <tr>
+     <%# <% @students.each do |student| %>  
+
+    <table class="table table-sm table-striped table-bordered">
+  <thead>
+    <tr>
+    
+      <th scope="col">Name</th>
+      <th scope="col">Hours</th>
+      <th scope="col"></th> 
+      <th scope="col"></th>
+      <th scope="col"></th>
+      
+      
+    </tr>
+  </thead>
+  <% @courses.each do |course| %> 
+  
+     <tr>
         <td><%= course.name %></td>
         <td><%= course.hours %></td>
         <td><%= link_to 'Show', course %></td>
@@ -23,6 +35,7 @@
     <% end %>
   </tbody>
 </table>
+
 
 <br>
 

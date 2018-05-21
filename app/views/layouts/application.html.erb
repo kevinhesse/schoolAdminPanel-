@@ -15,14 +15,29 @@
   <%# navbar %>
   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <!-- Navbar content -->
-  <a class="navbar-brand">Navbar</a>
+  <a class="navbar-brand">Student Admin Panel</a>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
   </nav>
 
+  <br>
   
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="teachers">Teachers</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="students">Students</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="courses">Courses</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="cohorts">Cohorts</a>
+  </li>
+</ul>
 
     <%= yield %>
 

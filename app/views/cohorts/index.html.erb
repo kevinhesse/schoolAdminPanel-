@@ -1,10 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Cohorts</h1>
+<h3>Cohorts</h3>
+
 
 <table>
+
+
+  <tbody>
+     <%# <% @students.each do |student| %>  
+
+    <table class="table table-sm table-striped table-bordered">
   <thead>
-    <tr>
+      <tr>
       <th>Name</th>
       <th>Start date</th>
       <th>End date</th>
@@ -12,22 +19,26 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
-  <tbody>
-    <% @cohorts.each do |cohort| %>
-      <tr>
-        <td><%= cohort.name %></td>
+  <% @cohorts.each do |cohort| %>
+  
+     <tr>
+     <td><%= cohort.name %></td>
         <td><%= cohort.start_date %></td>
         <td><%= cohort.end_date %></td>
         <td><%= cohort.course_id %></td>
         <td><%= link_to 'Show', cohort %></td>
-        <td><%= link_to 'Edit', edit_cohort_path(cohort) %></td>
+        <td><%= link_to 'Edit', edit_course_path(cohort) %></td>
         <td><%= link_to 'Destroy', cohort, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+
 <br>
 
+<button type="button" class="btn btn-light">
 <%= link_to 'New Cohort', new_cohort_path %>
+</button>
+
+<%# <%= link_to 'New Cohort', new_cohort_path %> 
