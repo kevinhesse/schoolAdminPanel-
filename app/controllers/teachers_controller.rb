@@ -5,6 +5,9 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
+    @teach = Teacher.find(6)
+    @teacher_cohort = @teach.cohorts 
+
   end
 
   # GET /teachers/1
@@ -26,7 +29,7 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     # experimental form below
-  
+     
     respond_to do |format|
       if @teacher.save
         format.html { redirect_to @teacher, notice: 'Teacher was successfully created.' }
