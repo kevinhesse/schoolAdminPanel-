@@ -15,10 +15,10 @@
   <%= @cohort.end_date %>
 </p>
 
-<p>
-  <strong>Course:</strong>
-  <%= @cohort.course_id %>
-</p>
+   <div class = "field">
+    <%= form.label :course %>
+    <%= form.collection_select(:course_id, Course.all, :id, :name) %>
+  </div>
 
 
 
