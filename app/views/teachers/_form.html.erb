@@ -19,6 +19,7 @@
   <div class="field">
     <%= form.label :last_name %>
     <%= form.text_field :last_name %>
+
   </div>
 
   <div class="field">
@@ -33,12 +34,18 @@
 
   <div class="field">
     <%= form.label :education %>
-    <%= form.text_field :education %>
+    <%# <%= form.text_field :education %> 
+    <%= form.select :education, ["HS", "College", "Masters", "PH.D"] %>
   </div>
 
   <div class = "field">
     <%= form.label :cohort %>
-    <%= form.text_field :cohort %>
+    <%= form.collection_select(:cohort_id, Cohort.all, :id, :name) %>
+  </div>
+
+ <div class="field">
+    <%= form.label :cohort_id %>
+    <%= form.number_field :cohort_id %>
   </div>
 
   <div class="actions">

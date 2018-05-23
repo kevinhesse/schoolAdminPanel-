@@ -10,21 +10,25 @@ class CohortsController < ApplicationController
   # GET /cohorts/1
   # GET /cohorts/1.json
   def show
+  @teachers = Teacher.all
   end
 
   # GET /cohorts/new
   def new
     @cohort = Cohort.new
+    @teachers = Teacher.all
   end
 
   # GET /cohorts/1/edit
   def edit
+    @teachers = Teacher.all
   end
 
   # POST /cohorts
   # POST /cohorts.json
   def create
     @cohort = Cohort.new(cohort_params)
+  
 
     respond_to do |format|
       if @cohort.save

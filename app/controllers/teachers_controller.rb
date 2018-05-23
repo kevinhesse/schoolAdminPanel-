@@ -5,7 +5,7 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
-    @teach = Teacher.find(6)
+    @teach = Teacher.find(1)
     @teacher_cohort = @teach.cohorts 
 
   end
@@ -13,6 +13,7 @@ class TeachersController < ApplicationController
   # GET /teachers/1
   # GET /teachers/1.json
   def show
+  
   end
 
   # GET /teachers/new
@@ -22,6 +23,7 @@ class TeachersController < ApplicationController
 
   # GET /teachers/1/edit
   def edit
+  
   end
 
   # POST /teachers
