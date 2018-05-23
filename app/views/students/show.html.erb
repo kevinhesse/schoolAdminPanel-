@@ -22,7 +22,9 @@
 
 <p>
   <strong>Cohort:</strong>
-  <%= @student.cohorts.find(params[:id]).name %>
+  <%= @student.cohorts.name%>
+  <%# <%= t.name %>
+  <%# <% end %> 
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

@@ -34,11 +34,7 @@
         <td><%= teacher.salary %></td>
         <td><%= teacher.education %></td>
        
-        <td>
-        <% @teacher_cohort.each do |cohort| %>
-          <h1><%=cohort.name%></h1>    
-        <% end %>
-        </td>
+      
         
         <td><%= link_to 'Show', teacher %></td>
         <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>

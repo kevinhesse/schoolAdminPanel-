@@ -43,12 +43,6 @@
     <%= form.collection_select(:cohort_id, Cohort.all, :id, :name) %>
   </div>
 
-
- <div class="field">
-    <%= form.label :cohort_id %>
-    <%= form.number_field :cohort_id %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>

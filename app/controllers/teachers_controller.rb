@@ -5,8 +5,8 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
-    @teach = Teacher.find(1)
-    @teacher_cohort = @teach.cohorts 
+    # @teach = Teacher.find(1)
+    # @teacher_cohort = @teach.cohort 
     @cohorts = Cohort.all
 
   end
@@ -76,7 +76,7 @@ class TeachersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def teacher_params
-      params.require(:teacher).permit(:first_name, :last_name, :age, :salary, :education)
+      params.require(:teacher).permit(:first_name, :last_name, :age, :salary, :education, :cohort_id)
     end
 end
 
