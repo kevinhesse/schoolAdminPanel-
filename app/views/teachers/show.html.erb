@@ -25,5 +25,12 @@
   <%= @teacher.education %>
 </p>
 
+<p>
+  <strong>Cohort:</strong>
+  <%= @teacher.cohorts.find(params[:id]).name %>
+</p>
+
+
+
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>

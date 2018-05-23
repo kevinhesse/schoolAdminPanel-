@@ -7,6 +7,7 @@ class TeachersController < ApplicationController
     @teachers = Teacher.all
     @teach = Teacher.find(1)
     @teacher_cohort = @teach.cohorts 
+    @cohorts = Cohort.all
 
   end
 

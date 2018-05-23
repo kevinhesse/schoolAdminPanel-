@@ -20,7 +20,10 @@
   <%= @student.education %>
 </p>
 
-
+<p>
+  <strong>Cohort:</strong>
+  <%= @student.cohorts.find(params[:id]).name %>
+</p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
