@@ -21,11 +21,18 @@
 </p>
 
 <p>
-  <strong>Cohort:</strong>
-  <%= @student.cohorts.name%>
-  <%# <%= t.name %>
-  <%# <% end %> 
+
+<% @cohorts.each do |cohort| %>
+     <tr>
+     <strong>Cohort:</strong>
+       <%= cohort.name %><br>
+      <strong> course: </strong>
+       <td><%= cohort.course.name %></td><br><br>
+      
+     </tr>
+   <% end %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
+
