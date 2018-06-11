@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
   def show
     # @student = Student.params[:id]
     @cohorts = Cohort.all
+    
   end
 
   # GET /students/new
@@ -28,6 +29,9 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
+    @student_cohort = StudentCohort.new(student_id: params[:student_id],cohort_id: params[:cohort_id])
+
+
 
     respond_to do |format|
       if @student.save
@@ -72,6 +76,7 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:first_name, :last_name, :age, :education, :cohort_id )
+      params.require(:student).permit(:first_name, :last_name, :age, :education)
     end
+
 end

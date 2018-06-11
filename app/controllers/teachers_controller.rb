@@ -31,7 +31,8 @@ class TeachersController < ApplicationController
   # POST /teachers.json
   def create
     @teacher = Teacher.new(teacher_params)
-    # experimental form below
+    @teacher_cohort = TeacherCohort.new(teacher_id: params[:teacher_id],cohort_id: params[:cohort_id])
+    
      
     respond_to do |format|
       if @teacher.save

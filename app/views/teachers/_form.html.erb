@@ -24,12 +24,12 @@
 
   <div class="field">
     <%= form.label :age %>
-    <%= form.number_field :age %>
+    <%= form.select :age,(21..115)%>
   </div>
 
   <div class="field">
     <%= form.label :salary %>
-    <%= form.number_field :salary %>
+    <%= form.select :salary,(20000...250000).step(500)%>
   </div>
 
   <div class="field">

@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :age %>
-    <%= form.select :age, (21..60)%>
+    <%= form.select :age,(4..21)%>
   </div>
 
   <div class="field">
@@ -36,11 +36,6 @@
     <%= form.label :cohort %>
     <%= form.collection_select(:cohort_id, Cohort.all, :id, :name) %>
   </div>
-
-
-  <%# <%= f.collection_select(:cohort_id, Cohort.all, :id, :name) %> 
-
-
 
   <div class="actions">
     <%= form.submit %>

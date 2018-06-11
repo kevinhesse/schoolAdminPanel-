@@ -19,12 +19,13 @@ class StudentCohortsController < ApplicationController
 
   # GET /student_cohorts/1/edit
   def edit
+    
   end
 
   # POST /student_cohorts
   # POST /student_cohorts.json
   def create
-    @student_cohort = StudentCohort.new(student_cohort_params)
+    @student_cohort = StudentCohort.create(student_cohort_params)
 
     respond_to do |format|
       if @student_cohort.save
@@ -69,6 +70,6 @@ class StudentCohortsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_cohort_params
-      params.require(:student_cohort).permit(:student_id, :cohort_id)
+      new_student_cohort = params.require(:student_cohort).permit(:student_id, :cohort_id)
     end
 end
