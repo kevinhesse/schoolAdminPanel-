@@ -25,7 +25,7 @@ class StudentCohortsController < ApplicationController
   # POST /student_cohorts
   # POST /student_cohorts.json
   def create
-    @student_cohort = StudentCohort.create(student_cohort_params)
+    @student_cohort = StudentCohorts.create(student_cohort_params)
 
     respond_to do |format|
       if @student_cohort.save
